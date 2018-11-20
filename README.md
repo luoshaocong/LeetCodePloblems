@@ -1,6 +1,8 @@
-# PROBLEM SET  All Answer is written in javascript
+#  LeetCode problems set
 
-## PROBLEM 1
+### all answer is written in javascript
+
+## Problem 1
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
@@ -11,7 +13,7 @@ Output: 6
 Explanation: [4,-1,2,1] has the largest sum = 6.
 ```
 
-## Answer
+## Answer for problem 1
 
 ```
 var maxSubArray = function(nums) {
