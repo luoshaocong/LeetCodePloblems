@@ -53,7 +53,7 @@ Space complexity:O(n).
 
 function twoSum(nums, target) {
   var twoSum = [];
-  nums.forEach(function(num, i) {
+  nums.forEach((num, i) =>{
     var diff = target - num;
     var j = nums.indexOf(diff)
     if (j > -1 && j !== i) {
