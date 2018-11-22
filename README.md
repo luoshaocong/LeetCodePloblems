@@ -44,10 +44,13 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 ## Answer for problem 2
-```
+
 
 Time complexity:O(n).
 Space complexity:O(n).
+```
+
+
 function twoSum(nums, target) {
   var twoSum = [];
   nums.forEach(function(num, i) {
