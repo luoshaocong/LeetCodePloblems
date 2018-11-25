@@ -129,3 +129,38 @@ var singleNumber = function(nums) {
   }
 };
 ```
+## Problem 5
+Given an integer array, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order, too.
+
+You need to find the shortest such subarray and output its length.
+
+Example 1:
+```
+Input: [2, 6, 4, 8, 10, 9, 15]
+Output: 5
+Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
+```
+
+## Answer for problem 5
+```
+var findUnsortedSubarray = function(nums) {
+    cpy = nums.slice();
+    nums.sort((a,b)=>{return a-b});
+    start = 0;
+    end = 0;   
+    for(i = 0; i < nums.length; i++) {
+        if(nums[i]!==cpy[i]) {
+            start = i;
+            break
+        }
+    }
+    for(j = nums.length; j>1 ; j--) {
+      if(nums[j]!==cpy[j]) {
+          end = j;
+          break
+       }       
+
+    }
+    return j - i+1 ;
+};
+```
