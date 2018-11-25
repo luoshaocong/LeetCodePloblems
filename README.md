@@ -121,8 +121,8 @@ Given a non-empty array of integers, every element appears twice except for one.
 var singleNumber = function(nums) {
   nums.sort();
   for(i = 0; i < nums.length; i++){
-    if(i %2 !== 0){
-      if(nums[i]!=nums[i+1]){
+    if(i %2 === 0){
+      if(nums[i]!== nums[i+1]){
         return nums[i];
       }
     }
