@@ -1,4 +1,4 @@
-#  LeetCode problems set
+#  LeetCode algorithm problems set
 
 ### all answer is written in javascript
 
@@ -151,16 +151,65 @@ var findUnsortedSubarray = function(nums) {
     for(i = 0; i < nums.length; i++) {
         if(nums[i]!==cpy[i]) {
             start = i;
-            break
+            break;
         }
     }
     for(j = nums.length; j>1 ; j--) {
       if(nums[j]!==cpy[j]) {
           end = j;
-          break
+          break;
        }       
 
     }
     return j - i+1 ;
 };
+```
+
+## Problem 6
+Given a string, your task is to count how many palindromic substrings in this string.
+
+The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
+
+Example 1:
+```
+Input: "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".
+```
+Example 2:
+```
+Input: "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+```
+## Answer for problem 6
+```
+var countpalindromic = function(i,j,s) {
+  count = 0;
+  while(i >= 0 && j < s.length && s[i] === s[j]){
+    count++;
+    i--;
+    j++;
+
+  }
+  return count;
+};
+
+
+var countSubstrings = function(s) {
+  count = s.length;
+
+  for(i = 0; i < s.length; i++){
+    count += countpalindromic(i,i + 1,s) + countpalindromic(i, i+2, s);
+
+
+  }
+
+    return count;
+};
+countSubstrings("abba")
+
+
+
+
 ```
