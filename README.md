@@ -1,6 +1,6 @@
 #  LeetCode algorithm problems set
 
-### all answer is written in javascript
+
 
 ## Problem 1
 
@@ -269,4 +269,37 @@ var fizzBuzz = function(n) {
 };
 
 fizzBuzz(15)
+```
+
+```
+## Question for problem 8
+Consider all the leaves of a binary tree.  From left to right order, the values of those leaves form a leaf value sequence.
+
+
+
+For example, in the given tree above, the leaf value sequence is (6, 7, 4, 9, 8).
+
+Two binary trees are considered leaf-similar if their leaf value sequence is the same.
+
+Return true if and only if the two given trees with head nodes root1 and root2 are leaf-similar.
+
+
+var leafSimilar = function(root1, root2) {
+    return helper(root1)===helper(root2);
+};
+
+## Answer for problem 8
+var helper=function(root){
+    var op=[];
+    inorder(root,op);
+    return op.join(",");
+}
+
+var inorder=function(root,op){
+  if(!root.left && !root.right){
+        op.push(root.val);
+    }
+    inorder(root.left,op);
+    inorder(root.right,op);
+}
 ```
