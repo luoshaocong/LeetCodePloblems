@@ -15,7 +15,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 
 ## Answer for problem 1
 
-```
+```javascript
 var maxSubArray = function(nums) {
   const hash = { 0: nums[0]}
   let max = nums[0];
@@ -48,7 +48,7 @@ return [0, 1].
 
 Time complexity:O(n).
 Space complexity:O(n).
-```
+```javascript
 
 
 function twoSum(nums, target) {
@@ -117,7 +117,7 @@ var climbStairs = function(n, memo = {}) {
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
 ## Answer for problem 4
-```
+```javascript
 var singleNumber = function(nums) {
   nums.sort();
   for(i = 0; i < nums.length; i++){
@@ -141,7 +141,7 @@ Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the wh
 ```
 
 ## Answer for problem 5
-```
+```javascript
 var findUnsortedSubarray = function(nums) {
     cpy = nums.slice();
     nums.sort((a,b)=>{return a-b});
@@ -182,7 +182,7 @@ Output: 6
 Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
 ```
 ## Answer for problem 6
-```
+```javascript
 var countpalindromic = function(i,j,s) {
   count = 0;
   while(i >= 0 && j < s.length && s[i] === s[j]){
@@ -244,7 +244,7 @@ Return:
 ```
 ## Answer for problem 7
 
-```
+```javascript
 var fizzBuzz = function(n) {
  arr = []
  for(i = 1; i <=15; i++) {
@@ -285,7 +285,7 @@ Return true if and only if the two given trees with head nodes root1 and root2 a
 
 
 ## Answer for problem 8
-```
+```javascript
 
 var leafSimilar = function(root1, root2) {
     return helper(root1)===helper(root2);
@@ -333,7 +333,7 @@ Note that an empty tree is represented by NULL, therefore you would see the expe
 
 
 ## Answer for problem 9
-```
+```javascript
 
 /**
  * Definition for a binary tree node.
