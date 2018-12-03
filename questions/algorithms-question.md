@@ -367,3 +367,36 @@ searchBST = function(root,val) {
 
 
 ```
+
+## Question for problem 10
+Given a linked list, determine if it has a cycle in it.
+
+
+## Answer for problem 10
+
+Using two pointer
+
+```javascript
+
+var hasCycle = function(head) {
+
+  if(head && head.next) {
+    let slow = head;
+    let fast = head.next;
+
+  }
+  while(slow != fast) {
+
+    slow = slow.next;
+    fast =fast.next.next;
+    if(fast === NULL || fast.next === null) {
+      return false;
+    }  
+  }
+  return true;
+
+
+
+
+}
+```
