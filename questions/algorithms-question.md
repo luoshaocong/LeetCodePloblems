@@ -400,3 +400,40 @@ var hasCycle = function(head) {
 
 }
 ```
+## Question for problem 11
+Write a program to find the node at which the intersection of two singly linked lists begins.
+
+
+For example, the following two linked lists:
+```
+A:          a1 → a2
+                   ↘
+                     c1 → c2 → c3
+                   ↗            
+B:     b1 → b2 → b3
+begin to intersect at node c1.
+```
+## Answer for problem 11
+```javascript
+
+var getIntersectionNode = function(headA, headB) {
+    if(headA == null || headB ==null ){
+        return null;
+    }
+    var hA = headA;
+    var hB = headB;
+    while(hA !== hB) {
+        hA =hA.next;
+        hB =hB.next;
+        if(hA ===hB){
+            return hA;
+        }
+        if (!hA) { hA = headB; }
+        if (!hB) { hB = headA; }
+    }
+
+
+    return hA;
+
+};
+```
