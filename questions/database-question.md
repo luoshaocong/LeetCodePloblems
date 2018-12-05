@@ -33,7 +33,7 @@ For example, according to the above table, we should output:
 ```
 ## Answer for problem 1
 ```
-~~~sql
+
 select name, population, area from World
 where area >3000000 or population > 25000000
 
