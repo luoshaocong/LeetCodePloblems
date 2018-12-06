@@ -471,21 +471,23 @@ But the following [1,2,2,null,3,null,3] is not:
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
-    return ismirror(root,root) ;
-
-}
-ismirror(root1, root2){
-    if(root1 ==null %% root2 ==null)
-        return true;
-    if(root1 ==null || root2 ==null)
-        return false;
-    return (root1.val ==root2.val)
-        &&ismirror(root1.right, root2.left)
-         &&ismirror(root1.left,root2,right);
+ var isSymmetric = function(root) {
+     const ismirror =(root1, root2) =>{
+     if(root1 ==null && root2 ==null)
+         return true;
+     if(root1 ==null || root2 ==null)
+         return false;
+     return (root1.val ==root2.val)
+         &&ismirror(root1.right, root2.left)
+          &&ismirror(root1.left,root2,right);
 
 
-}
+ }
+
+
+
+ }
+
 
 
 
