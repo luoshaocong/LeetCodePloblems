@@ -572,3 +572,48 @@ var flipAndInvertImage = function(A) {
     return A.map(row => row.map(ele => ele === 0 ? 1 : 0).reverse());
 };
 ```
+
+### Question for problem 15
+
+Given a binary tree, return the inorder traversal of its nodes' values.
+
+Example:
+```
+
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,3,2]
+```
+
+```javascript
+
+var inorderTraversal = function(root) {
+    let results = [];
+
+    let inorder = node => {
+        if(!node) return null;
+
+        if(node.left) {
+            inorder(node.left);
+        }
+
+        results.push(node.val);
+
+        if(node.right) {
+            inorder(node.right);
+        }
+    }
+
+    inorder(root);
+
+    return results;
+};
+
+
+
+```
